@@ -17,12 +17,12 @@ Benchmark.ips do |x|
 end
 
 # Warming up --------------------------------------
-#          ActiveModel     4.363k i/100ms
+#          ActiveModel     1.338k i/100ms
 #      dry-validations   203.000  i/100ms
 # Calculating -------------------------------------
-#          ActiveModel     43.838k (± 2.0%) i/s -    222.513k in   5.077880s
-#      dry-validations      2.059k (± 1.2%) i/s -     10.353k in   5.029151s
+#          ActiveModel     13.592k (± 0.9%) i/s -     68.238k in   5.020643s
+#      dry-validations      2.045k (± 1.3%) i/s -     10.353k in   5.062363s
 
 # Comparison:
-#          ActiveModel:    43838.3 i/s
-#      dry-validations:     2058.9 i/s - 21.29x  (± 0.00) slower
+#          ActiveModel:    13592.5 i/s
+#      dry-validations:     2045.4 i/s - 6.65x  (± 0.00) slower
