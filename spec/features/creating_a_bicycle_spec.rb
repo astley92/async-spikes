@@ -26,5 +26,15 @@ RSpec.describe "Using the API to create a bicycle", type: :request do
       "gear_amount" => 10,
       "id" => be_a_uuid,
     )
+    bicycle_id = JSON.parse(response.body)["id"]
+
+    get "/bicycles/#{bicycle_id}"
+    expect(response).to have_http_status(200)
+    expect(JSON.parse(response.body)).to include(
+      "colour" => "blue",
+      "wheel_size" => 15,
+      "gear_amount" => 10,
+      "id" => be_a_uuid,
+    )
   end
 end

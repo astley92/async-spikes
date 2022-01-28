@@ -1,4 +1,9 @@
 class BicyclesController < ApplicationController
+
+  def show
+    render json: Bicycle.find(params["id"])
+  end
+
   def create
     result = CreateBicycleSchema.new.call(bicycle_params)
 
